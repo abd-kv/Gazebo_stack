@@ -1,0 +1,26 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 30.0
+    sensor_timeout: 0.1
+    two_d_mode: true
+
+    odom_frame: "odom"
+    base_link_frame: "base_link"
+    world_frame: "map"
+
+    use_control: false
+
+    imu0: "/camera/imu/imu_plugin/out"
+    imu0_config: [false, false, false,
+                  true,  true,  true,
+                  false, false, false,
+                  false, false, false,
+                  true,  true,  true]
+    imu0_remove_gravitational_acceleration: true
+
+    gps0: "/gps/gps_plugin/out"
+    gps0_config: [true,  true,  false,
+                  false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  false, false, false]
